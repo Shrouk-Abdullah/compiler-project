@@ -19,4 +19,4 @@
     }
 }
 ```
-![photo_2023-03-22_20-49-08](https://user-images.githubusercontent.com/95624488/227007113-abf222fe-edd5-4ec0-9231-5f3dbf8b1428.jpg)
+<img src="https://user-images.githubusercontent.com/95624488/227007113-abf222fe-edd5-4ec0-9231-5f3dbf8b1428.jpg" width="600" height="300">
