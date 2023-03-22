@@ -35,7 +35,7 @@ public class main {
         maingram mg = new maingram(rewriter);
         mg.visit(tree);
 
-        FileWriter writer = new FileWriter("output.txt");
+        FileWriter writer = new FileWriter("output.java");
         writer.write(mg.output());
         writer.close();
         System.out.println("the code in output");
