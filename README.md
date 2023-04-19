@@ -70,7 +70,7 @@
     
  ## output file output.java : 
  
- <img src="(https://github.com/Shrouk-Abdullah/compiler-project/./1.png)" width="100%" height="500">
+ <img src="./1.png" width="100%" height="500">
  <img src="(https://github.com/Shrouk-Abdullah/compiler-project/blob/main/2.png)" width="100%" height="500">
  <img src="(https://github.com/Shrouk-Abdullah/compiler-project/blob/main/3.png)" width="100%" height="500">
  
