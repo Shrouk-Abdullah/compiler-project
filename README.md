@@ -89,7 +89,7 @@
     
     ##output file is output.txt
     
-    <img src="(https://github.com/Shrouk-Abdullah/compiler-project/blob/main/4.png)" width="100%" height="500">
+    <img src="./4.png" width="100%" height="500">
     
     
     
