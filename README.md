@@ -84,10 +84,10 @@
             block number 3 is visited
             …
             
-    ##Input file 
+    ## Input file 
     output.java
     
-    ##output file is output.txt
+    ## output file is output.txt
     
     <img src="./4.png" width="100%" height="500">
     
@@ -100,7 +100,7 @@
  Make sure that your pipeline does not include any manual effort
   implement branch coverage
 
-  ##Input file ag.java
+  ## Input file ag.java
   
   ``` 
    public class output {
@@ -160,7 +160,7 @@
   3. blocksnum.txt
   4. index.html
  
-##output Index.html
+## output Index.html
 
  <img src="https://github.com/Shrouk-Abdullah/compiler-project/blob/main/run.png" width="100%" height="500">
  
