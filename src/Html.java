@@ -11,8 +11,17 @@ public class Html extends JavaParserBaseVisitor<String> {
     public Html(TokenStreamRewriter rewriter , ArrayList<String> visitedBlocks) {
         this.rewriter = rewriter;
         this.visitedBlocks = visitedBlocks;
+//        System.out.println(visitedBlocks);
     }
-    
+    public void write_html(String string) throws Exception {
+        String outputFileName = "index.html";
+        FileOutputStream outputFile = new FileOutputStream(outputFileName, false);
+        BufferedOutputStream buffer = new BufferedOutputStream(outputFile);
+        // buffer can only write with characters
+        byte[] bytes = string.getBytes();
+        buffer.write(bytes);
+        buffer.close();
+    }
 
             String imports = "\nimport java.util.*;\nimport java.io.*;\n" ;
             String HtmlCode = " <!DOCTYPE html>\n" +
