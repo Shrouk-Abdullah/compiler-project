@@ -50,7 +50,7 @@ public class main {
 
 
 //
-//        String newfilepath = "C:\\Users\\Pc\\Desktop\\Final1\\final1\\output.java";
+//        String newfilepath = "C:\\Users\\Pc\\Desktop\\Final1\\final1\\test.java";
 //        File newfile2 = new File(newfilepath);
 //        FileInputStream newfile = null;
 //
@@ -67,15 +67,13 @@ public class main {
 //        ParseTree tree2 = parser2.compilationUnit(); // begin parsing at compilationUnit rule
 ////System.out.println(tree.toStringTree(parser2)); // print LISP-style tree
 //        TokenStreamRewriter rewriter2 = new TokenStreamRewriter(tokens);
-//    maingram mg = new maingram(rewriter2);
-//        testcase ts = new testcase(rewriter2);
-//        ts.visit(tree2);
-//       mg.visit(tree2);
+//        maingram mg = new maingram(rewriter2);
+//        mg.visit(tree2);
 //
-//        FileWriter writer2 = new FileWriter("test.java");
+//        FileWriter writer2 = new FileWriter("output.java");
 //        writer2.write(mg.output());
 //        writer2.close();
-//        System.out.println("the code in test");
+//        System.out.println("the code in output");
 
 
         // execute java output
@@ -83,3 +81,40 @@ public class main {
         genHTML(tokens,tree);
 
     }
+
+
+
+
+
+    public static void genHTML(CommonTokenStream token, ParseTree tree) throws Exception {
+        // generate HTML file
+        TokenStreamRewriter HTMLrewriter = new TokenStreamRewriter(token);
+        Html myHTMLparser = new Html(HTMLrewriter,readBlocksFile());
+        myHTMLparser.visit(tree);
+        myHTMLparser.write_html(HTMLrewriter.getText());
+
+        // open the HTML file automatically
+        File htmlFile = new File("index.html");
+        Desktop.getDesktop().browse(htmlFile.toURI());
+    }
+
+    static ArrayList<String> readBlocksFile() {
+        ArrayList<String> list = new ArrayList<String>();
+        try {
+            File myObj = new File("blocksnum.txt");
+            Scanner myReader = new Scanner(myObj);
+            while (myReader.hasNextLine()) {
+                String data = myReader.nextLine();
+
+                list.add(data);
+
+            }
+            myReader.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+
+        return list;
+    }
+}
